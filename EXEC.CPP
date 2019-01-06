@@ -18,8 +18,6 @@ void tread();
 void sread(char locate1[90]);
 void nread(char locate1[90]);
 void welhead();
-void iconBye();
-void iconOpen();
 void header();
 int entries1();
 void list();
@@ -166,8 +164,7 @@ directories();
 int get;char getTeIn;
 char locate1[90],locate2[90];
 char k; int open2,open3;
-///DATA Variables///////////////////////
-iconOpen();clrscr();
+
 welhead();clrscr();    //---------------Welcome Screen
 header();in.banner();  //---------------OPS Banner
 chooseAgain:
@@ -205,7 +202,7 @@ if(::selectMainOption==1){ //-----------Teachers' Directory
 	}else if(get==3){
 		goto chooseAgain;
 	}else if(get==4){
-	      iconBye();	exit(1);
+	      exit(1);
 	}
 
 }
@@ -416,7 +413,7 @@ else if(::selectMainOption==2){ //-----------Students' Directory
 	}else if(get==3){
 		goto chooseAgain;
 	}else if(get==4){
-	       iconBye();	exit(1);
+	       exit(1);
 	}
 }
 
@@ -510,12 +507,12 @@ else if(::selectMainOption==3){ //-----------NonTeachingStaffs' Directory
 	}else if(get==3){
 		goto chooseAgain;
 	}else if(get==4){
-	       iconBye();	exit(1);
+	       exit(1);
 	}
 }
 
 else if(::selectMainOption==4){ //-----------Exit
-iconBye();exit(1);
+exit(1);
 }
 
 else{ cout<<"\n\n\tWRONG CHOICE Press Enter To Retry";
@@ -523,7 +520,7 @@ getch();
 clrscr();
 goto chooseAgain;
 }
-iconBye();exit(1);
+exit(1);
 }
 ////////////////////////////MAIN FUNCTION ENDS//////////////////////////////////
 
@@ -867,7 +864,7 @@ getch();
 void welhead(){
 clrscr();
 cout<<"###############################################################################";
-cout<<"                               MY WORLD OF PROGRAMMING                        \n";
+cout<<"                              SCHOOL MANAGEMENT SYSTEM                       \n";
 cout<<"###############################################################################\n\n\n\n\n";
 cout<<"           w   w  EEEEE  L        C      O    M     M  EEEEE              ";
 cout<<"	           w   w  E      L       C C    O O   MM   MM  E                  ";
@@ -881,59 +878,11 @@ cout<<"\n\n\n\n\n\t\t\t\t\t\tPress ENTER to Continue...";
 getch();
 clrscr();
 }
-void iconOpen(){
-clrscr();
-header();
-cout<<"\t\t¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹\n";
-cout<<"\t\t¹¹¹                                             ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹        ¹¹¹¹¹        ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹    HELLO   ¹   WORLD    ¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹        ¹¹¹¹¹        ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹ ¹ ¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹ ¹¹¹ ¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹  ¹¹ ¹¹¹¹¹ ¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹  ¹¹¹¹¹¹¹  ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹                                             ¹¹¹\n";
-cout<<"\t\t¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹\n";
-cout<<"\n\t\t\t\t\t Press Any Key...";
-getch();
-}
 
-void iconBye(){
-clrscr();
-header();
-cout<<"\t\t¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹\n";
-cout<<"\t\t¹¹¹                                             ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹        ¹¹¹¹¹        ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹    GOOD    ¹    BYE!    ¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹        ¹¹¹¹¹        ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹¹¹ ¹ ¹¹¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹¹¹ ¹¹¹ ¹¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹  ¹¹ ¹¹¹¹¹ ¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹  ¹¹¹¹¹¹¹  ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹ ¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹ ¹¹¹\n";
-cout<<"\t\t¹¹¹                                             ¹¹¹\n";
-cout<<"\t\t¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹\n";
-cout<<"\n\t\t\t\t\t Press Any Key...";
-getch();
-}
 
 void header(){
 cout<<"###############################################################################";
-cout<<"                  SCHOOL RECORD MANAGEMENT SYSTEM Version 0.0.0.1                ";
+cout<<"                            SCHOOL RECORD MANAGEMENT SYSTEM.        \n";
 cout<<"###############################################################################\n\n\n";
 }
 //////////////////////////OTHER FUNCTIONS ENDS//////////////////////////////////
